@@ -12,9 +12,19 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+<<<<<<< HEAD
         //
+=======
+        $middleware->alias([
+            'isAdmin' => \App\Http\Middleware\IsAdmin::class,
+        ]);
+>>>>>>> origin/feature/admin-panel
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
     })
+<<<<<<< HEAD
     ->create();
+=======
+    ->create();
+>>>>>>> origin/feature/admin-panel
