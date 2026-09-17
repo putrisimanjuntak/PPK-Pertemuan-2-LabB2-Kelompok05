@@ -20,3 +20,7 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+/vendor
+/storage/framework/
+/storage/logs/
