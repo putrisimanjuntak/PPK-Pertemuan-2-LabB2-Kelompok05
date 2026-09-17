@@ -36,7 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy');
     Route::patch('tasks/{task}/done', [TaskController::class, 'markAsDone'])->name('tasks.done'); // SRS-009: memicu update progres
 
-    // SRS-008: penugasan tugas ke lebih dari satu anggota tim.
+    // SRS-008: penugasan tugas ke lebih dari satu anggota tim untuk penugasan
     Route::post('tasks/{task}/members', [TaskMemberController::class, 'store'])->name('tasks.members.add');
     Route::delete('tasks/{task}/members/{userId}', [TaskMemberController::class, 'destroy'])->name('tasks.members.remove');
 
