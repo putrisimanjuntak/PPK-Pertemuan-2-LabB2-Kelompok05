@@ -1,0 +1,2 @@
+<?php
+use Illuminate\Database\Migrations\Migration;use Illuminate\Database\Schema\Blueprint;use Illuminate\Support\Facades\Schema;return new class extends Migration{public function up():void{Schema::create('users',function(Blueprint $t){$t->id();$t->string('name',100);$t->string('email',150)->unique();$t->string('password');$t->enum('role',['admin','user'])->default('user');$t->timestamps();});}public function down():void{Schema::dropIfExists('users');}};
